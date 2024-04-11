@@ -1,0 +1,86 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Use Chakra UI to style",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Micheal",
+      "image": "/imgs/mario.jpg"
+    },
+    {
+      "id": "2",
+      "title": "The best styling tool",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Jena",
+      "image": "/imgs/cartoon1.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Learn Programming and make fun",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "L Miat",
+      "image": "/imgs/panta.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Javascript is awesome",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Tisome",
+      "image": "/imgs/doramon.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Change your mind",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Vishwas",
+      "image": "/imgs/cute.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Awesome things that I have",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Kevin",
+      "image": "/imgs/panta.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Life is beautiful",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Myivan",
+      "image": "/imgs/cartoon1.jpg"
+    },
+    {
+      "id": "8",
+      "title": "What a nice car!",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Jainsweb",
+      "image": "/imgs/cute.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Welcome to Myanmar",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Yan",
+      "image": "/imgs/panta.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Catch me if you can",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "author": "Uaann",
+      "image": "/imgs/mario.jpg"
+    }
+  ],
+  "users": [
+    {
+      "username": "Zin",
+      "email": "zin@gmail.com",
+      "password": "1122"
+    },
+    {
+      "username": "Jan",
+      "email": "ja @gmail.com",
+      "password": "2233"
+    }
+  ]
+}

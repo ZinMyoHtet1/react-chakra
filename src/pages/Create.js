@@ -29,7 +29,7 @@ function Create() {
   return (
     <formikContent.Provider value={formik}>
       <Box w="400px" p="20px">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={formik.handleSubmit}>
           <FormikConrol
             control="input"
             label="Username:"
@@ -50,7 +50,6 @@ function Create() {
           <Button
             type="submit"
             colorScheme="purple"
-            mt="20px"
             isLoading={formik.isSubmitting}
             loadingText="Submitting"
           >

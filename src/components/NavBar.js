@@ -1,7 +1,29 @@
 import React from "react";
-import { Flex, Avatar, Heading, Button, Text, HStack } from "@chakra-ui/react";
+import {
+  Flex,
+  Avatar,
+  Heading,
+  Button,
+  Text,
+  HStack,
+  useToast,
+} from "@chakra-ui/react";
+import { UnlockIcon } from "@chakra-ui/icons";
 
 function NavBar() {
+  const toast = useToast();
+
+  const logoutToast = () =>
+    toast({
+      title: "Account Logout",
+      description: "Successfully logout",
+      bg: "purple",
+      icon: <UnlockIcon />,
+      color: "purple.400",
+      duration: 4000,
+      position: "top",
+      isClosable: true,
+    });
   return (
     <Flex
       alignItems="center"
@@ -20,7 +42,9 @@ function NavBar() {
           size="sm"
         />
         <Text>zin@gmail.com</Text>
-        <Button colorScheme="purple">Logout</Button>
+        <Button colorScheme="purple" onClick={logoutToast}>
+          Logout
+        </Button>
       </HStack>
     </Flex>
   );

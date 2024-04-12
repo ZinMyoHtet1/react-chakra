@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/icons";
 
 function Profile() {
+  document.title = "Profile Page";
   return (
     <Tabs px="20px" variant="enclosed">
       <TabList>

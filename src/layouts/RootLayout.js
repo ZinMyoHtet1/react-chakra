@@ -10,7 +10,7 @@ function RootLayout() {
       <GridItem
         colSpan={{ base: 8, sm: 3, md: 2, xl: 2, "2xl": 1 }}
         bg="purple"
-        minHeight="100vh"
+        minHeight={{ base: "100px", sm: "100vh" }}
         as="aside"
       >
         <Sidebar />

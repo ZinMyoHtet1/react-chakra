@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SimpleGrid,
   Card,
@@ -13,16 +13,43 @@ import {
   Button,
   Divider,
   Avatar,
+  Spinner,
 } from "@chakra-ui/react";
-import { useLoaderData } from "react-router-dom";
 import { ViewIcon, EditIcon } from "@chakra-ui/icons";
+import { tasksLoader } from "../redux/DashBoard/dashBoardActions";
+import { useDispatch, useSelector } from "react-redux";
 
 function Dashboard() {
-  const tasks = useLoaderData();
-  document.title = "Dashboard";
+  document.title = "Dashboard Page";
+  const state = useSelector((state) => {
+    return state;
+  });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    tasksLoader(dispatch, "http://localhost:8080/tasks");
+  }, [dispatch]);
+
+  console.log(state.loading);
+  if (state.loading) {
+    return (
+      <Flex justify="center">
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="blue.500"
+          size="xl"
+        />
+      </Flex>
+    );
+  }
+  if (state.error) {
+    return <div>{state.error}</div>;
+  }
   return (
     <SimpleGrid columns="4" minChildWidth="250px" gap="20px" p="10px">
-      {tasks.map((task, index) => (
+      {state.tasks.map((task, index) => (
         <Card key={index} bg="white" borderTop="4px solid purple">
           <CardHeader pb="5px">
             <Flex alignItems="center" gap={5}>
@@ -64,11 +91,5 @@ function Dashboard() {
     </SimpleGrid>
   );
 }
-
-export const tasksLoader = async () => {
-  const res = await fetch("http://localhost:8080/tasks");
-
-  return res.json();
-};
 
 export default Dashboard;

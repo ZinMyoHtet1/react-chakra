@@ -17,14 +17,14 @@ const onSubmit = (values) => {
 export const formikContent = createContext();
 
 function Create() {
+  document.title = "Create Page";
+
   const formik = useFormik({
     initialValues,
     onSubmit,
     validationSchema,
     validateOnBlur: true,
   });
-
-  console.log("Formik", formik);
 
   return (
     <formikContent.Provider value={formik}>

@@ -19,6 +19,7 @@ import { ViewIcon, EditIcon } from "@chakra-ui/icons";
 
 function Dashboard() {
   const tasks = useLoaderData();
+  document.title = "Dashboard";
   return (
     <SimpleGrid columns="4" minChildWidth="250px" gap="20px" p="10px">
       {tasks.map((task, index) => (

@@ -28,7 +28,7 @@ function Create() {
 
   return (
     <formikContent.Provider value={formik}>
-      <Box w="400px" p="20px">
+      <Box w={{ base: "100%", sm: "400px", xl: "500px" }} p="20px">
         <form onSubmit={formik.handleSubmit}>
           <FormikConrol
             control="input"

@@ -7,15 +7,16 @@ import FormikConrol from "../formik/FormikConrol";
 const initialValues = {
   username: "",
   email: "",
-  // priority: "",
+  priority: undefined,
+};
+
+const onSubmit = (values) => {
+  console.log("Submited", values);
 };
 
 export const formikContent = createContext();
 
 function Create() {
-  const onSubmit = (values) => {
-    console.log("Submited", values);
-  };
   const formik = useFormik({
     initialValues,
     onSubmit,
@@ -28,7 +29,7 @@ function Create() {
   return (
     <formikContent.Provider value={formik}>
       <Box w="400px" p="20px">
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={onSubmit}>
           <FormikConrol
             control="input"
             label="Username:"
@@ -40,6 +41,11 @@ function Create() {
             label="Email:"
             name="email"
             type="email"
+          />
+          <FormikConrol
+            control="checkbox"
+            label="make this priority"
+            name="priority"
           />
           <Button
             type="submit"
